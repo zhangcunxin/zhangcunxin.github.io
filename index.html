@@ -313,7 +313,9 @@
 <h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Applying_a_watermark"><a href="#Applying_a_watermark" class="headerlink" title="Applying a watermark"></a>Applying a watermark</h3><p>水印是覆盖在图片上用来显示图片的所有权,水印和需要添加水印的图片不需要是相同大小或者相同格式的。<br>实际上,水印通常是PNG格式,而目标文件通常是JPEG格式.默认情况下,imageMagick支持很多种格式.</p>
 <p>最基本的使用语法如下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ composite -gravity SouthEast watermark.png src.jpg target.jpg</span><br></pre></td></tr></table></figure>
-<p>watermark.png和src.jpg就是需要组合的图片,target.jpg就是生成的图片,当然你可以将target.jpg也写成src.jpg,这时候生成的图片将覆盖原始图片,如果你需要这么做,请确保你已经备份了原始图片,否则带来不必要的麻烦.</p>
+<p>watermark.png和src.jpg就是需要组合的图片,target.jpg就是生成的图片,当然你可以将target.jpg也写成src.jpg,这时候生成的图片将覆盖原始图片,如果你需要这么做,请确保你已经备份了原始图片,否则带来不必要的麻烦.<br>-gravity选项表示水印必须小于目标图片,并且确定水印的位置.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ composite -gravity -geometry +<span class="number">5</span>+<span class="number">5</span> SouthEast watermark.png src.jpg target.jpg</span><br></pre></td></tr></table></figure>
+<p>-geometry +5+5 选项表示基于-gravity确定的位置移动5pixels</p>
 
           
         
