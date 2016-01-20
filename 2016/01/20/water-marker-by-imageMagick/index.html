@@ -57,16 +57,19 @@
 
 
 
-<meta name="description" content="imageMagick是一个非常强大的工具，它可以很容易地操作和组合图片。我们经常使用它改变图片大小，裁剪图片，有时候需要给图片添加水印。通常，imageMagick可以通过PHP系统调用或者通过lua函数进行调用，下面的例子将只是用command-line进行归纳。">
+<meta name="description" content="imageMagick是一个非常强大的工具，它可以很容易地操作和组合图片.我们经常使用它改变图片大小,裁剪图片,有时候需要给图片添加水印.通常,imageMagick可以通过PHP系统调用或者通过lua函数进行调用,下面的例子将只是用command-line进行归纳.安装imageMagick的方法在此就不多说了.
+Quick StartApplying a watermark水印是覆盖在图片上用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过imageMagick给图片添加水印">
 <meta property="og:url" content="http://zhangcunxin.github.io/2016/01/20/water-marker-by-imageMagick/index.html">
 <meta property="og:site_name" content="张存鑫的博客">
-<meta property="og:description" content="imageMagick是一个非常强大的工具，它可以很容易地操作和组合图片。我们经常使用它改变图片大小，裁剪图片，有时候需要给图片添加水印。通常，imageMagick可以通过PHP系统调用或者通过lua函数进行调用，下面的例子将只是用command-line进行归纳。">
-<meta property="og:updated_time" content="2016-01-20T02:39:48.000Z">
+<meta property="og:description" content="imageMagick是一个非常强大的工具，它可以很容易地操作和组合图片.我们经常使用它改变图片大小,裁剪图片,有时候需要给图片添加水印.通常,imageMagick可以通过PHP系统调用或者通过lua函数进行调用,下面的例子将只是用command-line进行归纳.安装imageMagick的方法在此就不多说了.
+Quick StartApplying a watermark水印是覆盖在图片上用">
+<meta property="og:updated_time" content="2016-01-20T06:36:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="通过imageMagick给图片添加水印">
-<meta name="twitter:description" content="imageMagick是一个非常强大的工具，它可以很容易地操作和组合图片。我们经常使用它改变图片大小，裁剪图片，有时候需要给图片添加水印。通常，imageMagick可以通过PHP系统调用或者通过lua函数进行调用，下面的例子将只是用command-line进行归纳。">
+<meta name="twitter:description" content="imageMagick是一个非常强大的工具，它可以很容易地操作和组合图片.我们经常使用它改变图片大小,裁剪图片,有时候需要给图片添加水印.通常,imageMagick可以通过PHP系统调用或者通过lua函数进行调用,下面的例子将只是用command-line进行归纳.安装imageMagick的方法在此就不多说了.
+Quick StartApplying a watermark水印是覆盖在图片上用">
 
 
 
@@ -288,7 +291,11 @@
       
 
       
-        <p>imageMagick是一个非常强大的工具，它可以很容易地操作和组合图片。我们经常使用它改变图片大小，裁剪图片，有时候需要给图片添加水印。<br>通常，imageMagick可以通过PHP系统调用或者通过lua函数进行调用，下面的例子将只是用command-line进行归纳。</p>
+        <p>imageMagick是一个非常强大的工具，它可以很容易地操作和组合图片.我们经常使用它改变图片大小,裁剪图片,有时候需要给图片添加水印.<br>通常,imageMagick可以通过PHP系统调用或者通过lua函数进行调用,下面的例子将只是用command-line进行归纳.<br>安装<a href="http://www.imagemagick.org/script/install-source.php" target="_blank" rel="external">imageMagick</a>的方法在此就不多说了.</p>
+<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Applying_a_watermark"><a href="#Applying_a_watermark" class="headerlink" title="Applying a watermark"></a>Applying a watermark</h3><p>水印是覆盖在图片上用来显示图片的所有权,水印和需要添加水印的图片不需要是相同大小或者相同格式的。<br>实际上,水印通常是PNG格式,而目标文件通常是JPEG格式.默认情况下,imageMagick支持很多种格式.</p>
+<p>最基本的使用语法如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ composite -gravity SouthEast watermark.png src.jpg target.jpg</span><br></pre></td></tr></table></figure>
+<p>watermark.png和src.jpg就是需要组合的图片,target.jpg就是生成的图片,当然你可以将target.jpg也写成src.jpg,这时候生成的图片将覆盖原始图片,如果你需要这么做,请确保你已经备份了原始图片,否则带来不必要的麻烦.</p>
 
       
     </div>
@@ -442,7 +449,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Applying_a_watermark"><span class="nav-number">1.1.</span> <span class="nav-text">Applying a watermark</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
